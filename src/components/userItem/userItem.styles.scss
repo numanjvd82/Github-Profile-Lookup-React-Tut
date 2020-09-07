@@ -1,0 +1,35 @@
+.user-item {
+  margin: 1rem;
+  padding: 1rem;
+  width: 18%;
+
+  .user-content {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 1, 1, auto;
+    h2 {
+      margin: 10px 0;
+    }
+  }
+
+  .user-img {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  .profile-link {
+    background-color: #333333;
+    text-decoration: none;
+    color: white;
+    margin: 1rem;
+    padding: 10px 20px;
+    letter-spacing: 0.1rem;
+    border-radius: 20px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
