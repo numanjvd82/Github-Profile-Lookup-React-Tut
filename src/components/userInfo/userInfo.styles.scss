@@ -3,12 +3,12 @@
   height: auto;
   margin: 1rem auto;
   padding: 1rem;
-  // display: flex;
-  // flex-flow: wrap column;
-  // justify-content: center;
-  // align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.37);
   border-radius: 20px;
   transition: all 1s ease-in;
@@ -33,7 +33,6 @@
   .user-img {
     width: 350px;
     display: block;
-    text-align: center;
 
     .img {
       width: 100%;
