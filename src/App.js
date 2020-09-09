@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/layout/navbar.component';
 import Users from './components/users/users.component';
-import UserInformation from './components/userInformation/userInformation.component';
+import UserInfo from './components/userInfo/userInfo.component';
 import Search from './components/searchBox/search.component';
 import Alert from './components/alert/alert.component';
 import About from './pages/about';
@@ -30,7 +30,7 @@ class App extends React.Component {
   getUser = async (username) => {
     this.setState({ loading: true });
     const res = await axios.get(
-      `https://api.github.com/users/${username}?q=cliend_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
+      `https://api.github.com/users/${username}?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
     );
     this.setState({ user: res.data, loading: false });
   };
@@ -73,9 +73,9 @@ class App extends React.Component {
               <Route exact path="/about" component={About} />
               <Route
                 exact
-                path="/user:login"
+                path="/user/:login"
                 render={(props) => (
-                  <UserInformation
+                  <UserInfo
                     {...props}
                     getUser={this.getUser}
                     user={user}
