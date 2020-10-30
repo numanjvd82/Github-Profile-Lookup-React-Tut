@@ -56,7 +56,7 @@ const UserInfo = ({ user, loading, getUser, match }) => {
         <span>Public Repos: {public_repos}</span>
         <br />
         Hireable: {''}
-        {hireable ? (
+        {hireable === true ? (
           <i className="fas fa-check" />
         ) : (
           <i className="fas fa-times-circle" />
